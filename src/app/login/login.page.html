@@ -1,0 +1,40 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>This is the login page</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-content color="success">
+  <ion-card color="light">
+    <br/>
+    <ion-card-header>
+      <ion-text color="dark">
+        <ion-card-subtitle>Food Trip</ion-card-subtitle>
+        <ion-card-title>Please Login</ion-card-title>
+      </ion-text>
+    </ion-card-header>
+    <form ngNativeValidate (submit)="tryLogin($event)">
+
+      <ion-item color="light">
+        <ion-label position="floating" color="tertiary">Username:</ion-label>
+        <ion-input type="text" id="username" color="tertiary" required></ion-input>
+      </ion-item>
+
+      <br/>
+      <ion-item color="light">
+        <ion-label position="floating" color="tertiary">Password:</ion-label>
+        <ion-input type="password" id="pass" color="tertiary" required></ion-input>
+      </ion-item>
+
+      <br/><br/>
+      <ion-item lines="none" color="light">
+        <ion-button style="margin: auto" color="success" type="submit">Login</ion-button>
+      </ion-item>
+
+      <br/><br/>
+      <ion-item lines="none" color="light">
+        <ion-button style="margin: auto" color-shade="secondary" type="button" click="btnClicked" routerLink="/custsignup">Register</ion-button>
+      </ion-item>
+    </form>
+  </ion-card>
+
+</ion-content>

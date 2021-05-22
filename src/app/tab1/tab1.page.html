@@ -1,17 +1,47 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header translucent>
+  <ion-toolbar color="success">
+    <ion-title>Food Categories</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content fullscreen color = "successs">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div (click)="getDish('Appetizer')">
+          <img src="../../assets/icon/appetizer.png">
+        </div>
+      </ion-col>
+      <ion-col>
+        <div (click)="getDish('Main Course')"> 
+          <img src="../../assets/icon/main course.png">
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div (click)="getDish('Side Dish')"> 
+          <img src="../../assets/icon/side dish.png">
+        </div>
+      </ion-col>
+      <ion-col>
+        <div (click)="getDish('Beverage')"> 
+          <img src="../../assets/icon/beverage.png">
+        </div>
+      </ion-col>
+    </ion-row>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-row>
+      <ion-col>
+        <div (click)="getDish('Dessert')"> 
+          <img src="../../assets/icon/dessert.png">
+        </div>
+      </ion-col>
+      <ion-col>
+        <div (click)="getDish('Combo Deal')"> 
+          <img src="../../assets/icon/combo deal.png">
+        </div>
+      </ion-col>
+    </ion-row>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  </ion-grid>
 </ion-content>

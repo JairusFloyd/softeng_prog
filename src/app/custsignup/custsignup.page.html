@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" text="" icon="arrow-back-circle"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="success">
+  <ion-card>
+    <ion-card-header>
+      <ion-text color="dark">
+        <ion-card-subtitle>Food Trip</ion-card-subtitle>
+        <ion-card-title>Please Sign-up</ion-card-title>
+      </ion-text>
+    </ion-card-header>
+
+    <form ngNativeValidate (submit)="trySubmit($event)">
+
+      <ion-item>
+        <ion-label position="floating" color="tertiary">Username:</ion-label>
+        <ion-input type="text" id="username" color="dark" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" color="tertiary">E-mail:</ion-label>
+        <ion-input type="text" id="username" color="dark" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" color="tertiary">Password:</ion-label>
+        <ion-input type="password" id="username" color="dark" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" color="tertiary">Confirm Password:</ion-label>
+        <ion-input type="password" id="pass" color="dark" required></ion-input>
+      </ion-item>
+
+      <br/><br/>
+      <ion-item lines="none">
+        <ion-button style="margin: auto" color="success" type="submit">submit</ion-button>
+      </ion-item>
+
+    </form>
+
+  </ion-card>
+</ion-content>

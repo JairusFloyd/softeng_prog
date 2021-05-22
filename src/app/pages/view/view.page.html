@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar color = "success">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" text="" icon="arrow-back-circle"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let dish of dishes" (click)="presentPopover(dish.food_name)">
+      <ion-avatar slot="start">
+        <img src="./avatar-finn.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ dish.food_name }}</h2>
+        <h3>Price: {{ dish.food_price }}</h3>
+        <p>Description: {{ dish.food_description }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
