@@ -1,0 +1,94 @@
+<!-- <ion-content color="success">
+  <ion-card color="light">
+    <br/>
+    <ion-card-header>
+      <ion-text color="dark">
+        <ion-card-subtitle>Food Trip</ion-card-subtitle>
+        <ion-card-title>Please Login</ion-card-title>
+      </ion-text>
+    </ion-card-header>
+
+
+    <form ngNativeValidate (submit)="tryLogin($event)">
+
+      <ion-item color="light">
+        <ion-label position="floating" color="tertiary">Username:</ion-label>
+        <ion-input type="text" id="username" color="tertiary" required></ion-input>
+      </ion-item>
+
+      <br/>
+      <ion-item color="light">
+        <ion-label position="floating" color="tertiary">Password:</ion-label>
+        <ion-input type="password" id="pass" color="tertiary" required></ion-input>
+      </ion-item>
+
+      <br/><br/>
+      <ion-item lines="none" color="light">
+        <ion-button style="margin: auto" color="success" type="submit">Login</ion-button>
+      </ion-item>
+
+      <br/><br/>
+      <ion-item lines="none" color="light">
+        <ion-button style="margin: auto" color-shade="secondary" type="button" click="btnClicked" routerLink="/custsignup">Register</ion-button>
+      </ion-item>
+
+    </form>
+  </ion-card>
+</ion-content> -->
+
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,
+500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&display=swap" rel="stylesheet">
+
+<!-- <div class="bg-pic">
+  <div class="background-filter"> -->
+
+<ion-content class="ion-text-center" [fullscreen]="true">
+  <div class="bg-pic">
+    <div class="background-filter">
+    <ion-card>
+      <ion-card-header>
+        <div class="logo">
+          <img src="assets/icon/logo.png" alt="logo ni vincent">
+        </div>  
+          <ion-card-title>
+            Welcome!
+          </ion-card-title>
+            <ion-card-subtitle>
+              Time to Shop, Let's <a href="#">Sign in</a> First!
+            </ion-card-subtitle>
+      </ion-card-header>
+
+        <ion-card-content fullscreen="true">
+
+          <div class="ion-padding">
+            <form ngNativeValidate (submit)="tryLogin($event)">
+          
+                <div class="wrap-input">
+                <input class="input" position="floating" type="text" id="username" name="us" placeholder="Username" required>
+                </div>
+          
+                <div class="wrap-input">
+                <input class="input" position="floating" type="password" id="pass"name="pw" placeholder="Password" required>
+                </div>
+
+                <a href="#" class="ion-text-center custom-font">Forget Password?</a>
+          
+                <div class="container-form-btn">
+                  <button type="submit" class="form-btn custom-font">Sign In</button>
+                </div>
+
+                <!-- <div class="container-form-btn">
+                  <button type="button" class="form-btn custom-font" click="btnClicked" routerLink="/custsignup">Register</button>
+                </div> -->
+              </form>
+            </div>
+            <p class="ion-text-center custom-font">Don't have an account? <a click="btnClicked" href="/custsignup"> Sign Up</a></p>
+          </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
