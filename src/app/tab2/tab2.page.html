@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="danger">
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="settings-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-list-header>
+      Orders Placed
+    </ion-list-header>
+
+    <ion-item *ngFor="let item of orders; let i = index">
+      <ion-avatar slot="start">
+        <img src="./avatar-finn.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{item.customer_name}}</h2>
+        <h3>Item: {{item.food_name}}</h3>
+        <h3>Quantity: {{item.qty}}</h3>
+        <p>Subtotal: {{ item.subtotal }}</p>
+        <p>Status: {{ item.status }}</p>
+        <ion-button size="small" color="secondary" (click)="checkout(item.order_id)">Checkout <ion-icon position="end" name="pencil-sharp"></ion-icon></ion-button>
+        
+      </ion-label>
+      
+    </ion-item>
+
+  </ion-list>
+</ion-content>

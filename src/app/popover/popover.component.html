@@ -1,0 +1,33 @@
+<ion-list>
+  <ion-toolbar class="ion-toolbar">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img
+          src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg"
+        />
+      </ion-avatar>
+      <ion-label>
+        <h3>{{ name }}</h3>
+      </ion-label>
+      
+    </ion-item>
+  </ion-toolbar>
+
+  <ion-card-content class="ion-text-left">
+    <ion-item lines="none">
+      <ion-label>
+        <h2>Qty:</h2>
+        <ion-label>
+          <h3>Price: {{ price }}</h3>
+        </ion-label>
+        <h2>Input 1: Amoos</h2>
+        <div class="input-number-wrapper">
+            <button class="decrease" (click)="minus()">-</button>
+            <input type="text" style="width: 20%;" value="{{qty}}"/>
+            <button class="increase" (click)="add()">+</button>
+        </div>
+      </ion-label>
+    </ion-item>
+    <ion-button color="success" (click)="place()">Success</ion-button>
+  </ion-card-content>
+</ion-list>
