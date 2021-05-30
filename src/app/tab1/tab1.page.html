@@ -1,0 +1,59 @@
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&display=swap" rel="stylesheet">
+
+<ion-header translucent>
+  <ion-toolbar color="light">
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)" fill="clear" slot="end" class="settings">
+        <ion-icon name="reorder-three-sharp"></ion-icon>
+        <!-- <ion-icon name="notifications-sharp" class="notif"></ion-icon> -->
+      </ion-button>
+    </ion-buttons>
+      <div class="logo">
+        <img src="assets/icon/menu.png" alt="menu logo">
+      </div>
+    <ion-title>Food Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen color = "successs">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div (click)="getDish('Appetizer')">
+          <img src="../../assets/icon/appetizer.png">
+        </div>
+      </ion-col>
+      <ion-col>
+        <div (click)="getDish('Main Course')"> 
+          <img src="../../assets/icon/main course.png">
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div (click)="getDish('Side Dish')"> 
+          <img src="../../assets/icon/side dish.png">
+        </div>
+      </ion-col>
+      <ion-col>
+        <div (click)="getDish('Beverage')"> 
+          <img src="../../assets/icon/beverage.png">
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div (click)="getDish('Dessert')"> 
+          <img src="../../assets/icon/dessert.png">
+        </div>
+      </ion-col>
+      <ion-col>
+        <div (click)="getDish('Combo Deals')"> 
+          <img src="../../assets/icon/combo deal.png">
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

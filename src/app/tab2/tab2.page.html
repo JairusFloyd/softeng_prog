@@ -1,0 +1,41 @@
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&display=swap" rel="stylesheet">
+
+<ion-header translucent>
+  <ion-toolbar color="light">
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)" fill="clear" slot="end" class="settings">
+        <ion-icon name="reorder-three-sharp"></ion-icon>
+        <!-- <ion-icon name="notifications-sharp" class="notif"></ion-icon> -->
+      </ion-button>
+    </ion-buttons>
+      <div class="logo">
+        <img src="assets/icon/cart.png" alt="cart logo">
+      </div>
+    <ion-title>Cart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-list-header>
+      Orders Placed
+    </ion-list-header>
+
+    <ion-item *ngFor="let item of orders; let i = index">
+      <ion-avatar slot="start">
+        <img src="./avatar-finn.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{item.customer_name}}</h2>
+        <h3>Item: {{item.food_name}}</h3>
+        <h3>Quantity: {{item.qty}}</h3>
+        <p>Subtotal: {{ item.subtotal }}</p>
+        <!-- <p>Status: {{ item.status }}</p> -->
+        <ion-button size="small" color="secondary" (click)="checkout(item.id, i)">Checkout <ion-icon position="end" name="pencil-sharp"></ion-icon></ion-button>
+        
+      </ion-label>
+      
+    </ion-item>
+
+  </ion-list>
+</ion-content>

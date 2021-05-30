@@ -1,0 +1,81 @@
+form {
+    margin-top: -20px;
+    margin-left: 1px;
+    // margin: auto;
+    }
+
+ion-card-title{
+    color: #242020;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.wrap-input {
+    background: transparent;
+    border-width: 0;
+    --inner-border-width:0;
+    --highlight-color-focused:none;
+    margin-bottom: 15px;
+    // background-color: rgba(255, 255, 255, .8);
+    // border-radius: 20px;
+    // margin-top: 7px;
+    // margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.12);
+    }
+
+input {
+    align-items: center;
+    display: block;
+    width: 260px;
+    background: none;
+    border-radius: 15px;
+    border: 2px solid black;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    // line-height: 1.2;
+    height: 50px;
+    padding: 0 15px 0 18px;
+    color: black;
+    }
+
+
+input:focus{
+    border: 2px solid #67C2CB;
+    border-radius: 15px;
+    outline: none;
+}   
+
+.container-form-btn {
+    display: flex;
+    justify-content: center;
+    }
+
+.form-btn {
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    min-width: 160px;
+    height: 40px;
+    background-color: #67C2CB;
+    border-radius: 15px;
+    font-size: 15px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-top: 5px;
+    transition: all 0.2s;
+    box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.5)
+    }      
+
+.form-btn:hover {
+    background-color: #BA67CB;
+    box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.8);
+}
+
+.form-btn:focus{
+    display: none;
+}

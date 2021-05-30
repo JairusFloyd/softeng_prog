@@ -1,0 +1,49 @@
+<ion-content fullscreen>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Phone Number</ion-card-subtitle>
+      <ion-card-title><ion-input placeholder="Enter Phone Number" [(ngModel)]="customer_number"></ion-input></ion-card-title>
+    </ion-card-header>
+    <ion-card-header>
+      <ion-card-subtitle>Address</ion-card-subtitle>
+      <ion-card-title><ion-input placeholder="Enter Address" [(ngModel)]="customer_address"></ion-input></ion-card-title>
+    </ion-card-header>
+    <ion-card-header>
+      <ion-card-subtitle>Date (yyyy-mm-dd)</ion-card-subtitle>
+      <ion-card-title><ion-item>
+        <ion-label>MM DD YY</ion-label>
+        <ion-item style="width: 100%; margin: auto">
+          <ion-datetime
+            displayFormat="YYYY-MM-DD"
+            placeholder="click here"
+            [(ngModel)]="date"
+          ></ion-datetime>
+        </ion-item>
+      </ion-item></ion-card-title>
+    </ion-card-header>
+    <ion-card-header>
+      <ion-card-subtitle>Time</ion-card-subtitle>
+      <ion-card-title><ion-input placeholder="Click to pick time" [(ngModel)]="time" (click)=" presentAlertRadio()" readonly></ion-input></ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-fab
+    title="Update"
+    horizontal="start"
+    vertical="top"
+    slot="fixed"
+    (click)="dismiss()"
+  >
+    <ion-fab-button color="success">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-button type="button" (click)="checkout()">Checkout</ion-button>
+</ion-content>
