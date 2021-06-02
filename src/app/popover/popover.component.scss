@@ -1,0 +1,56 @@
+.container {
+    padding-top: 40px;  
+}
+
+// ion-button{
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+ion-label h3, h2{
+    color: #242020;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 13px;
+    font-family: 'Barlow', sans-serif;
+}
+
+.container-form-btn {
+    display: flex;
+    justify-content: center;
+    }
+
+.form-btn {
+    margin-top: 4px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    min-width: 160px;
+    height: 40px;
+    background-color: #BA67CB;
+    border-radius: 15px;
+    font-size: 15px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-top: 5px;
+    transition: all 0.2s;
+    box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.5)
+    }      
+
+.form-btn:hover {
+    background-color: #67C2CB;
+    box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.8);
+}
+
+.form-btn:focus{
+    display: none;
+}
+
+.input-number-wrapper{
+    position:relative;
+    margin-left: 30px;
+    margin-top: -25px;
+}

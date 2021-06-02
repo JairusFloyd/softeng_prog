@@ -1,0 +1,35 @@
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+<!-- <ion-header>
+  <ion-toolbar color = "light">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" text="" icon="arrow-back-circle"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header translucent>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title >{{ title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let dish of dishes" (click)="presentPopover(dish.food_name, dish.food_price)">
+      <ion-avatar slot="start">
+        <img src="assets/icon/logo.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ dish.food_name }}</h2>
+        <h3>Price: {{ dish.food_price }}</h3>
+        <ion-textarea color="tertiary" readonly>Description: {{ dish.food_description }}</ion-textarea>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

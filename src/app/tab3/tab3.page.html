@@ -1,0 +1,70 @@
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&display=swap" rel="stylesheet">
+
+<ion-header translucent>
+  <ion-toolbar color="light">
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)" fill="clear" slot="end" class="settings">
+        <ion-icon name="reorder-three-sharp"></ion-icon>
+        <!-- <ion-icon name="notifications-sharp" class="notif"></ion-icon> -->
+      </ion-button>
+    </ion-buttons>
+      <div class="logo">
+        <img src="assets/icon/dash.png" alt="dash logo">
+      </div>
+    <ion-title>Order Dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+    <ion-item
+    *ngFor="let item of orders; let i = index"
+      (click)="appoint(doctor.doctor_name, doctor.doctor_address)"
+      lines="none"
+    >
+    <ion-card>
+      <img src="../../assets/icon/appetizer.png" />
+      <!-- <img style="width:100px; height:150px;" src="{{ asset('/storage/img/'.{{item.img}}) }}" alt="No image found"> -->
+      <ion-card-header>
+        <ion-card-subtitle><ion-badge color="secondary">{{ item.status }}</ion-badge></ion-card-subtitle>
+        <ion-card-title>{{ item.food_name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-label>
+          <h3>Quantity: {{item.qty}}</h3>
+          <p>Subtotal: {{ item.subtotal }}</p>
+          <div>
+            <p>Contact no: {{ item.phone }}</p>
+            <p>Username: {{ item.user_fullname }}</p>
+            <p>To be delivered on or before: <br>{{ item.delivery_date }}</p>
+            <p>Mode of Payment: {{item.payment}}</p>
+          </div>
+          <ion-button size="small" color="danger" *ngIf="item.status != 'Cancelled' && item.status != 'Accepted' && item.status != 'Done' && item.status != 'Rejected'" (click)="cancel(item.id)">Cancel <ion-icon position="end" name="pencil-sharp"></ion-icon></ion-button>
+         
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+    </ion-item>
+  </ion-list>
+
+  <!-- <ion-list>
+    <ion-list-header>
+      Checked Out Orders
+    </ion-list-header>
+
+    <ion-item *ngFor="let item of orders; let i = index">
+      <ion-avatar slot="start">
+        <img src="./avatar-finn.png">
+      </ion-avatar>
+      <ion-label>
+        <h2></h2>
+        <h3>Item: </h3>
+        <h3>Quantity: {{item.qty}}</h3>
+        <p>Subtotal: {{ item.subtotal }}</p>
+        <p>Status: {{ item.status }}</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-list> -->
+</ion-content>

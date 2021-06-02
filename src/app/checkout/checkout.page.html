@@ -1,0 +1,58 @@
+<ion-content fullscreen>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+  <ion-card>
+    <p>Note: Cash on Delivery transaction only</p>
+
+    <ion-card-title>Contact Details</ion-card-title>
+
+    <ion-item>
+      <ion-label position="floating">Phone Number:</ion-label>
+      <ion-input placeholder="Enter Phone Number" [(ngModel)]="customer_number" type="text" maxlength="11" minlength="11"  pattern="[0-9]{11}"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Complete Address:</ion-label>
+      <ion-input placeholder="Enter Complete Address" [(ngModel)]="customer_address" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item style="width: 100%; text-align: left;">
+      <ion-label position="floating">Date (YYYY-MM-DD):</ion-label>
+        <ion-datetime
+          displayFormat="YYYY-MM-DD"
+          [(ngModel)]="date"
+        ></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Time:</ion-label>
+      <ion-input ion-input placeholder="Tap to pick time" [(ngModel)]="time" (click)="presentAlertRadio()" readonly></ion-input>
+    </ion-item>
+  
+  </ion-card>
+
+  <ion-fab
+    title="Update"
+    horizontal="start"
+    vertical="top"
+    slot="fixed"
+    (click)="dismiss()"
+  >
+    <ion-fab-button color="secondary">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <div class="container-form-btn">
+    <button type="button" class="form-btn custom-font" (click)="checkout()">Checkout</button>
+  </div>   
+
+</ion-content>

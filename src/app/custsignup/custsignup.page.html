@@ -1,0 +1,108 @@
+<!-- <ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button color="light" text="" icon="arrow-back-circle"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="success">
+  <ion-card>
+    <ion-card-header>
+      <ion-text color="dark">
+        <ion-card-subtitle>Food Trip</ion-card-subtitle>
+        <ion-card-title>Please Sign-up</ion-card-title>
+      </ion-text>
+    </ion-card-header>
+
+    <form ngNativeValidate (submit)="trySubmit($event)">
+
+      <ion-item>
+        <ion-label position="floating" color="tertiary">Username:</ion-label>
+        <ion-input type="text" id="username" color="dark" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" color="tertiary">E-mail:</ion-label>
+        <ion-input type="text" id="username" color="dark" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" color="tertiary">Password:</ion-label>
+        <ion-input type="password" id="username" color="dark" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating" color="tertiary">Confirm Password:</ion-label>
+        <ion-input type="password" id="pass" color="dark" required></ion-input>
+      </ion-item>
+
+      <br/><br/>
+      <ion-item lines="none">
+        <ion-button style="margin: auto" color="success" type="submit">submit</ion-button>
+      </ion-item>
+    </form>
+  </ion-card>
+</ion-content> -->
+
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&display=swap" rel="stylesheet">
+
+
+
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="login"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center" [fullscreen]="true">
+
+<div class="signup">
+  <div class="bg2-filter">
+      <div class="logo">
+        <img src="assets/icon/logo.png" alt="logo ni vincent">
+      </div>  
+    <ion-card>
+          <ion-card-title>Sign-up</ion-card-title>
+            <ion-card-subtitle>Create your <a href="#">Account</a> by filling up the form</ion-card-subtitle>
+    
+        <ion-card-content fullscreen="true">
+          <div class="ion-padding">
+            <form form ngNativeValidate (submit)="trySubmit($event)">
+          
+                <div class="wrap-input">
+                <input class="input" type="text" id="username" name="us" placeholder="Username" required>
+                </div>
+
+                <div class="wrap-input">
+                  <input class="input" type="text" id="fullname" name="fn" placeholder="Fullname" required>
+                  </div>
+          
+                <div class="wrap-input">
+                  <input class="input" type="text" id="email" name="em" placeholder="Email" required>
+                  </div>
+
+                <div class="wrap-input">
+                <input class="input" required type="password" id="pass"name="pw" placeholder="Password">
+                </div>
+
+                <div class="wrap-input">
+                  <input class="input" required type="password" id="cpass"name="cpw" placeholder="Confirm Password">
+                </div>
+          
+                <div class="container-form-btn">
+                  <button type="submit" class="form-btn custom-font">Submit</button>
+                </div>   
+            </form>
+          </div>
+        </ion-card-content>
+    </ion-card>
+  </div>
+</div>
+</ion-content>
